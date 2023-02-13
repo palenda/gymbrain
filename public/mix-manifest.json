@@ -1,0 +1,17 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/images/icons/arrow_back.svg": "/images/icons/arrow_back.svg",
+    "/images/icons/arrow_down.svg": "/images/icons/arrow_down.svg",
+    "/images/icons/arrow_right.svg": "/images/icons/arrow_right.svg",
+    "/images/icons/chevron_arrow_left.svg": "/images/icons/chevron_arrow_left.svg",
+    "/images/icons/email_letter.svg": "/images/icons/email_letter.svg",
+    "/images/icons/expand_arrow.svg": "/images/icons/expand_arrow.svg",
+    "/images/icons/favorite_flag.svg": "/images/icons/favorite_flag.svg",
+    "/images/icons/logout.svg": "/images/icons/logout.svg",
+    "/images/icons/pencil.svg": "/images/icons/pencil.svg",
+    "/images/icons/save.svg": "/images/icons/save.svg",
+    "/images/icons/three_dots.svg": "/images/icons/three_dots.svg",
+    "/images/icons/trash.svg": "/images/icons/trash.svg",
+    "/images/logo.png": "/images/logo.png"
+}
