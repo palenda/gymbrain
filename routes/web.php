@@ -4,8 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-
-Route::prefix('login/google')->name('google.')->group(function () {
+Route::prefix('auth/google')->name('google.')->group(function () {
     Route::post('', [LoginController::class, 'loginWithGoogle'])->name('login');
     Route::get('callback', [LoginController::class, 'callbackFromGoogle'])->name('callback');
 });

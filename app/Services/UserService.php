@@ -14,25 +14,6 @@ use Illuminate\Support\Str;
 class UserService
 {
     /**
-     * @return array<string>
-     */
-    public function getAll(): array
-    {
-        $users = User::with('department', 'languages', 'resumes', 'resumes.skills')
-            ->whereExists(function ($query) {
-                $query->select(DB::raw(1))
-                    ->from('resumes')
-                    ->whereColumn('resumes.user_id', 'users.id');
-            })
-            ->orderBy('last_name')
-            ->orderBy('name')
-            ->orderBy('id')
-            ->get();
-
-        return UserResource::collection($users)->resolve();
-    }
-
-    /**
      * @throws NotFoundException
      * @throws Exception
      */
@@ -45,7 +26,7 @@ class UserService
 
     public function createUser(string $name, string $lastName, string $email): User
     {
-        return User::updateOrCreate(['email' => $email], [
+        return User::create([
             'name' => $name,
             'last_name' => $lastName,
             'email' => $email,
@@ -59,7 +40,7 @@ class UserService
      */
     private function findUser(int $userId): User
     {
-        $user = User::with('department', 'languages', 'resumes', 'resumes.skills')
+        $user = User::with('room')
             ->where('id', $userId)
             ->first();
 

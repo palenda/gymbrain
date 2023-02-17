@@ -8,9 +8,9 @@
       <form
         v-if="!user"
         method="POST"
-        action="/login/google"
+        action="/auth/google"
       >
-        <div class="row mt-3">
+          <div class="row mt-3">
           <div class="col-md-8 offset-md-4">
             <button
               type="submit"
@@ -36,11 +36,11 @@ export default {
   },
 
   mounted() {
-    if (window.Laravel.user) {
+    // if (window.Laravel.user) {
       this.$router.push({
-        name: '/',
+        name: 'profile',
       });
-    }
+    // }
   },
 };
 </script>

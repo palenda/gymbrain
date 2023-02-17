@@ -6,7 +6,7 @@
 export default {
     name: 'App',
     mounted() {
-        if (!window.Laravel.user) {
+        if (!window.Laravel || !window.Laravel.user) {
             this.$router.push({
                 name: 'login',
             });
